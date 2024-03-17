@@ -1,0 +1,133 @@
+.login{
+    padding-top: 100px;
+
+    &-image{
+        @include adaptive-value('width', 180, 160);
+    }
+
+    &-content{
+        @include flex(center, center);
+        flex-direction: column;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        width: 620px;
+        border-radius: 34px;
+        padding: 40px;
+
+        @media screen and (max-width: 800px){
+            box-shadow: none;
+            width: 100%;
+        }
+    }
+
+    &-card{
+        @include flex(center, center);
+        padding-bottom: 100px
+    }
+
+    &-form{
+        @include flex(center, center);
+        flex-direction: column;
+        gap: 14px;
+        width: 100%
+    }
+
+    &-check{
+        @include flex(center, unset);
+        gap: 10px;
+    }
+
+    &-title{
+        @include adaptive-value('font-size', 30, 19);
+        font-weight: 700;
+        padding-top: 26px;
+        padding-bottom: 40px;
+    }
+
+    &-items{
+        @include flex(center, center);
+        flex-direction: column;
+        gap: 15px;
+        position: relative;
+    }
+
+    &-input{
+        background-color: hsla(0, 0%, 100%, .8);
+        width: 470px;
+        border: 1px solid #86868b;
+        padding: 16px 30px;
+        font-size: 17px;
+        line-height: 1.23536;
+        font-weight: 400;
+        letter-spacing: -.022em;
+        font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+        border-radius: 12px;
+        text-align: left;
+        appearance: none;
+        transition: all 0.2s ease-in-out;
+        outline: none;
+
+        &:focus{
+            border-color: #0071e3;
+        }
+
+        @media screen and (max-width: 480px){
+            width: 100%;
+        }
+    }
+
+    &-submit{
+        position: absolute;
+        top: 8px;
+        right: 50px;
+        border: none;
+
+        @media screen and (max-width: 480px){
+            width: 100%;
+            right: -100px;
+        }
+    }
+
+    &-password{
+        background-color: hsla(0, 0%, 100%, .8);
+        width: 420px;
+        border: 2px solid #86868b;
+        border-radius: 12px;
+        padding: 14px 30px;
+        font-size: 17px;
+        line-height: 1.23536;
+        font-weight: 400;
+        letter-spacing: -.022em;
+        font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+        border-radius: 12px;
+        text-align: left;
+        appearance: none;
+        transition: all 0.2s ease-in-out;
+        outline: none;
+        opacity: 0;
+        visibility: hidden;
+        @media screen and (max-width: 480px){
+            width: 100%;
+        }
+
+        &.show{
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    
+    &-check{
+        cursor: pointer;
+        @include adaptive-value('font-size', 18, 17);
+        
+        &_box{
+            cursor: pointer;
+        }
+    }
+
+    &-link{
+        color: #06c;
+        font-weight: 600;
+        font-size: 14px;
+    }
+}

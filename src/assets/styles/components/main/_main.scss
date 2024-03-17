@@ -1,0 +1,55 @@
+.main{
+    position: relative;
+    background-color: #fcfbff;
+
+    &-content{
+        @include flex(center, center);
+        flex-direction: column;
+        padding-top: 50px
+    }
+
+    &-image{
+        @include adaptive-value('width', 120, 75);
+        border: 1px solid #d2d2d7;
+        border-radius: 30px;
+    }
+
+    &-title{
+        font-size: 86px;
+        font-weight: 600;
+        letter-spacing: 0;
+        line-height: 103px;
+        max-inline-size: 660px;
+        -webkit-margin-before: 29px;
+        margin-block-start: 29px;
+        color: #000000E0;
+        padding-bottom: 10px;
+    }
+
+    &-subtitle{
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 28px;
+        color: rgba(0, 0, 0, .56);
+        -webkit-margin-after: 20px;
+        margin-block-end: 20px;
+        max-inline-size: 470px;
+        text-align: center;
+        padding-bottom: 50px;
+    }
+
+    &-btn{
+        background-color: #000;
+        color: #fff;
+        border-radius: 21px;
+        @include adaptive-value('font-size', 19, 18);
+        line-height: 20px;
+        padding: 9px 35px;
+        border: none;
+    }
+
+    &-modal{
+        position: absolute;
+        top: 30px;
+    }
+}
