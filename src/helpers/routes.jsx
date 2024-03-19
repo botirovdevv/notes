@@ -1,6 +1,7 @@
 import Login from "../layout/Notes/header/Login";
 import Home from "../pages/Home";
 import NotFound from "../pages/NotFound";
+import Register from "../pages/Register";
 import IndexNotes from "../pages/notes/IndexNotes";
 
 export const routes = [
@@ -17,6 +18,12 @@ export const routes = [
     {
         path: "/login",
         element: <Login/> 
+    },
+
+    {
+        path: "/register",
+        element: <Register/>
     }
+
 
 ]

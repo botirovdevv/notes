@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import appleIdImg from '../../../assets/images/appleid.svg'
 import 'boxicons'
+import { Link } from 'react-router-dom'
 
 function Login() {
   const [show, setShow] = useState(false)
@@ -60,7 +61,7 @@ function Login() {
                     <span className='login-check_title'>Оставаться в системе</span>
                   </div>
                   <a href="#" className='login-link'>Забыли пароль?</a>
-                  <a href="#" className='login-link'>Создать Apple ID</a>
+                  <Link to='/register' className='login-link'>Create an Apple ID</Link>
               </form>
           </div>
         </div>

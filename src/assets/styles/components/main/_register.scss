@@ -1,0 +1,145 @@
+.register{
+
+    &-bg{
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, .1);
+        position: fixed;
+        top: 0;
+        left: 0;
+        backdrop-filter: blur(2px);
+        z-index: 999999999;
+    }
+
+    &-content{
+        position: fixed;
+        top: 50px;
+        z-index: 999999999999;
+        @include flex(center, center);
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    &-card{
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        max-width: 640px;
+        max-height: 526px;
+        border-radius: 10px;
+        @include flex(center, center);
+        flex-direction: column;
+    }
+
+    &-items{
+        @include flex(center, center);
+        flex-direction: column;
+        overflow-y: scroll;
+        height: 500px;
+    }
+
+    &-item{
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        background-color: #eff0f1;
+        border-bottom: 1px solid rgba(0, 0, 0, .2);
+        height: 91px;
+        width: 100%;
+        @include flex(center, center)
+    }
+
+    &-title{    
+        text-align: center;
+        color: #000;
+        @include adaptive-value('font-size', 30, 24);
+        font-weight: 600;
+        letter-spacing: .004em;
+    }
+
+    &-intro{
+        padding-top: 35px;
+        padding-bottom: 8px;
+        @include adaptive-value('font-size', 18, 17);
+        font-weight: 400;
+    }
+
+    &-alredy_have{
+        @include adaptive-value('font-size', 17, 16 );
+        padding-bottom: 35px;
+        
+    }
+
+    &-sigin{
+        color: #0070c9;
+    }
+
+    &-name{
+        @include flex(center, center);
+        gap: 5px;
+        
+    }
+
+    &-input{
+            font-size: 17px;
+            line-height: 1.23543;
+            font-weight: 400;
+            letter-spacing: -.022em;
+            font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+            width: 100%;
+            height: 3.3em;
+            margin-bottom: 14px;
+            padding-left: 16px;
+            padding-right: 16px;
+            color: #333;
+            text-align: left;
+            border: 1px solid #d6d6d6;
+            border-radius: 4px;
+            background: hsla(0, 0%, 100%, .8);
+            background-clip: padding-box;
+            transition: all 0.2s ease-in-out;
+
+            &:focus{
+                appearance: none;
+                border-color: #0070c9;
+                outline: 0;
+                box-shadow: 0 0 0 3px rgba(131,192,253,.5)
+            }
+    }
+
+    &-dropdown{
+        @include flex(start, center);
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 30px;
+        border-bottom: 1px solid #e7e7e8;
+        padding: 30px 0 20px;
+    }
+    
+    &-select{
+        width: 100%;
+        font-size: 17px;
+        line-height: 1.23543;
+        font-weight: 400;
+        letter-spacing: -.022em;
+        font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        color: #333;
+        padding: 20px;
+        text-align: left;
+        background: hsla(0, 0%, 100%, .8);
+        border: 1px solid #d6d6d6;
+        border-radius: 4px;
+        margin-bottom: 14px;
+        min-height: 32px;
+        transition: all 0.2s ease-in-out;
+        
+
+        &:focus{
+            border-color: #0070c9;
+            outline: 0;
+            box-shadow: 0 0 0 3px rgba(131,192,253,.5)
+        }
+    }
+}
