@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from './notes/Navbar'
-import Index from './icloud'
+import Index from './icloud/Index'
 
 function Home() {
   return (
