@@ -4,6 +4,7 @@ import 'boxicons'
 
 function Login() {
   const [show, setShow] = useState(false)
+  const [open, setOpen] = useState(false)
   const [value, setValue] = useState('')
 
   const handleInputChange = (e) => {
@@ -18,9 +19,11 @@ function Login() {
     e.preventDefault();
     if (!show) {
       alert('Iltimos, maydonni to\'ldiring!');
-
       return;
-    } 
+    } else{
+      setOpen(true);
+      console.log(open);
+    }
 
   }
 
@@ -49,10 +52,11 @@ function Login() {
                     >
                       <box-icon name='right-arrow-circle' size="md" color={show ? "#494949" : "gray"}></box-icon>
                     </button>
-                    <input type="pasword" placeholder='password' className='login-password' />
+                    <input type="pasword" placeholder='password' className={open ? 'login-password show' : 'login-password'} />
+                    
                   </div>
                   <div className="login-check">
-                    <input type="checkbox" className='login-check_box'/>
+                    <input type="checkbox"  className='login-check_box'/>
                     <span className='login-check_title'>Оставаться в системе</span>
                   </div>
                   <a href="#" className='login-link'>Забыли пароль?</a>

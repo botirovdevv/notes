@@ -1,35 +1,11 @@
 .index{
     background-color: #fcfbff;
     height: 100%;
-    
-    &-modal{
-        opacity: 0;
-        visibility: hidden;
-        z-index: 9;
-        position: relative;
-        top: 100px;
-        @include flex(center, center);
-        margin: 0 auto;
-        width: 100%;
-        transition: all 0.2s ease-in-out;
-        
-        &.show{
-            margin-bottom: 200px;
-            opacity: 1;
-            visibility: visible;
-            z-index: 9999;
-        }
-    }
-
-
 
     &-content{
         @include flex(center, center);
         flex-direction: column;
-
-        &.hide{
-            display: none;
-        }
+        padding-top: 50px;
     }
 
     &-video{
@@ -63,5 +39,6 @@
         margin-block-end: 20px;
         max-inline-size: 478px;
         text-align: center;
+        padding-bottom: 80px;
     }
 }

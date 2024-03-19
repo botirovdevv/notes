@@ -11,7 +11,7 @@ function Index() {
             <div className="index-content">
                 <IcloudVideo/>
                 <h1 className='index-title'>iCloud</h1>
-                <Link to="/login" className='main-btn' >Войти/</Link>
+                <Link to="/login" className='main-btn' >Войти</Link>
                 <p className="index-subtitle">Лучшее место для хранения фотографий, файлов, заметок, почты и многого другого.</p>
             </div>
         </div>
