@@ -1,0 +1,6 @@
+.title{
+    height: 100vh;
+    @include flex(center, center);
+    text-align: center;
+    padding: 0 20px;
+}
