@@ -13,9 +13,9 @@
 
     &-content{
         position: fixed;
-        top: 50px;
         z-index: 999999999999;
         @include flex(center, center);
+        height: 100vh;
         width: 100%;
         margin: 0 auto;
         padding: 0 20px;
@@ -187,13 +187,15 @@
     }
 
     &-links{
-        height: 63px;
+        height: 93px;
         width: 100%;
         background-color: #f7f7f7;
         border-top: 1px solid #c7c8c8;
         @include flex(center, end);
         gap: 15px;
-        padding-right: 50px;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+        padding: 16px 30px;
     }
 
     &-link{
