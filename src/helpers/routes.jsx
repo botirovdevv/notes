@@ -11,7 +11,7 @@ export const routes = [
     },
 
     {
-        path: "*",
+        path: "/*",
         element: <NotFound/>
     },
 
@@ -24,6 +24,4 @@ export const routes = [
         path: "/register",
         element: <Register/>
     }
-
-
 ]

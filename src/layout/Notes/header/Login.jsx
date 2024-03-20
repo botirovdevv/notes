@@ -23,7 +23,6 @@ function Login() {
       return;
     } else{
       setOpen(true);
-      console.log(open);
     }
 
   }
