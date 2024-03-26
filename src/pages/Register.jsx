@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import email from '../assets/images/email.png'
-
 
 function Register() {
     const [selectedOption, setSelectedOption] = useState(null);
@@ -11,20 +9,8 @@ function Register() {
     setSelectedCheck(e.target.value);
   };
 
-    const [show, setShow] = useState(false)
-
-    const openModal = () => {
-        setShow(true)
-    }
   return (
     <section className="register">
-            <div className={show ? "email show" : "email"}>
-                <div className="email-card">
-                  <img src={email} className='email-image' alt="Email" />
-                  <h1 className='email-title'>Elektron pochtangizni tasdiqlang!</h1>
-                  <a href="#" className='email-link'>Tasdiqlash</a>
-                </div>
-            </div>
         <div className="register-bg"></div>
             <div className="register-content">
                 <div className="register-card">
@@ -106,7 +92,7 @@ function Register() {
                         </div>
                     <div className="register-links">
                         <Link to="/login" className='register-link'>Cencel</Link>
-                        <Link className='register-continue' onClick={openModal}>Continue</Link>
+                        <Link className='register-continue' to="/email" >Continue</Link>
                     </div>
                 </div>
             </div>

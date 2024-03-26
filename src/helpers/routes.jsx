@@ -5,6 +5,7 @@ import Register from "../pages/Register";
 import IndexNotes from "../pages/notes/IndexNotes";
 import Notes from "../layout/Notes/main/Notes"
 import Note from "../pages/notes/Note";
+import Email from "../pages/Email";
 
 export const routes = [
     {
@@ -37,7 +38,7 @@ export const routes = [
     //     element: <Notes/>
     // },
     {
-        path: "test",
-        element: <Note/>
+        path: "/email",
+        element: <Email/> 
     }
 ]
