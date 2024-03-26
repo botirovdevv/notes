@@ -1,0 +1,269 @@
+.notes{
+    
+    &-app{
+        @include flex(center, end)  
+    }
+    
+    &-content{
+        border-right: 1px solid #dbdbdd ;
+        padding-top: 15px;
+        height: 100vh;
+        width: 400px;
+        padding-right: 20px;
+    }
+
+    &-items{
+        background-color: #e6e6e7;
+        width: 100%;
+        @include flex(center, unset);
+        gap: 5px;
+        padding: 7px;
+        border-radius: 14px;
+    }   
+
+    &-input{
+        width: 300px;
+        height: 35px;
+        background-color: transparent;
+        border: none;
+        color: gray;
+        font-weight: 500;
+        outline: none;
+        font-size: 17px;
+
+        &::placeholder{
+            color: gray;
+            letter-spacing: 0.56px;
+        }
+    }
+
+    &-elements{
+        margin-top: 30px;
+        line-height: 25px;
+    }
+    
+    &-element{
+        cursor: pointer;
+        border-radius: 12px;
+        transition: all 0.2s ease-in-out;
+        padding: 10px;
+        padding-left: 30px;
+        
+        &:hover{
+            background-color: #e8e8eb;
+        }
+        
+        &.active{
+            background-color: #ebb800;
+            color: white;
+        }
+    }
+
+    &-title{
+         font-weight: 700;
+        font-size: 20px;
+        font-style: normal;
+    }
+
+    &-date{
+        font-size: 600;
+        font-size: 16px;
+    }
+
+    &-enter{
+    background-color: #fcfbff;
+
+    }
+
+    &-login{
+        margin-top: 100px;
+    }
+}
+
+.button{
+    margin-top: 150px;
+}
+
+.note{
+    &-content{
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.2s ease-in-out;
+        width: 100%;
+
+        &.show{
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &-items{
+        position: relative;
+    }
+
+    &-modal{
+        position: absolute;
+        top: 35px;
+        left: -85px;
+        background-color: #fff;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        padding: 20px 22px;
+        border-radius: 12px;
+        opacity: 0;
+        visibility: hidden;
+        z-index: -1;
+        transition: all 0.2s ease-in-out;
+
+        &.show{
+            opacity: 1;
+            visibility: visible;
+            z-index: 999999;
+        }
+
+        &_items{
+            @include flex(center, center);
+            gap: 60px;
+            border-bottom: 1px solid #dbdbdd;
+            padding-bottom: 10px;
+            padding-left: 22px;
+            padding-right: 22px;
+        }
+    }
+
+    &-input{
+        width: 100%;
+        height: 100vh;
+        outline: none;
+        margin-top: 10px;
+        border: none;
+        padding: 5px 20px;
+        resize: none;
+
+        &.bold{
+            font-size: 30px;
+            font-weight: 700;
+        }
+    }
+
+    &-navbar{
+        padding-top: 82px;
+        padding-left: 10px;
+        padding-right: 10px;
+        @include flex(center, space-between)
+    }
+
+    &-btn{
+        border: none;
+    }
+
+    &-items{
+        @include flex(center, unset);
+        gap: 10px;
+    }
+
+    &-edit{
+        border: none;
+        font-size: 18px;
+        font-weight: 500;
+        color: #ebb800;
+        transition: all 0.2s ease-in-out;
+        padding: 4px 8px;
+        border-radius: 6px;
+
+        &.active{
+            opacity: 0.5;
+        }
+
+        &:hover{
+            background-color: #ebb800;
+            color: #fff;
+        }
+    }
+
+    &-bold{
+        border: none;
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    &-italic{
+        border: none;
+        font-style: italic;
+        font-size: 20px;
+    }
+
+    &-underline{
+        border: none;
+        text-decoration: underline;
+        font-size: 20px;
+    }
+
+    &-through{
+        border: none;
+        text-decoration: line-through;
+        font-size: 20px;
+    }
+
+    &-bold_title{
+        border: none;
+        font-size: 24px;
+    }
+
+    &-editor_items{
+        @include flex(center, unset);
+        gap: 10px;
+        padding-top: 20px;
+    }
+
+    &-heading{
+        font-size: 22px;
+    }
+
+    &-subheading{
+        font-size: 19px;
+    }
+
+    &-body{
+        font-size: 17px;
+        font-weight: 500;
+    }
+
+    &-monospaced{
+        font-size: 17px;
+        font-weight: 500;   
+    }
+
+    &-bullet{
+        @include flex(center, unset);
+        gap: 10px;
+        font-size: 16px;
+
+        &_icon{
+            font-size: 30px;
+        }
+    }
+
+    &-list{
+        padding-left: 10px;
+    }
+
+    &-dashed{
+        font-size: 15px;
+    }
+
+    &-number{
+        font-size: 15px;
+    }
+
+    &-check{
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.2s ease-in-out;
+
+        &.active{
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+

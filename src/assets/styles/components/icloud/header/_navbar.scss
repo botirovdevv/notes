@@ -1,10 +1,12 @@
 .navbar{
     padding: 15px 0;
-    background-color: rgba(251, 251, 253, .5);
+    background-color: rgba(37, 38, 40, .21);
+    background-image: radial-gradient(circle at 25%, hsla(0, 0%, 100%, .2), rgba(50, 50, 50, .2) 80%);
     width: 100%;
     position: fixed;
-    backdrop-filter: blur(13px);
+    backdrop-filter: blur(14px);
     z-index: 9999999;
+    top: 0;
 
     &-items{
         @include flex(center, space-between);
@@ -17,14 +19,19 @@
     }
 
     &-img{
-        width: 50px;
-        height: 50px;
+        width: 35px;
+        height: 35px;
         border-radius: 50%;
         object-fit: contain;
     }
 
     &-logo{
         font-weight: 600;
-        @include adaptive-value('font-size', 25, 18)
+        @include adaptive-value('font-size', 25, 18);
+        color: #fff;
+    }
+
+    &-span{
+        color: #ebb800;
     }
 }
