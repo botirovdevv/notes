@@ -1,5 +1,6 @@
 .login{
     padding-top: 100px;
+    position: relative;
 
     &-image{
         @include adaptive-value('width', 180, 160);
@@ -150,3 +151,4 @@
         font-size: 15px;
     }
 }
+

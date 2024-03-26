@@ -67,6 +67,7 @@ function Login() {
           <section className='login'>
           <Navbar/>
             <div className="container">
+              
               <div className="login-card">
                 <div className="login-content">
                     <img src={appleIdImg} className='login-image' alt="Apple ID" />
